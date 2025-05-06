@@ -36,6 +36,22 @@
   .image-big {
     background-color: rgb(34, 139, 34);
   }
+
+  .big-footer-box {
+    background-color: rgb(240, 128, 128);
+  }
+
+  .small-footer-box {
+    background-color: rgb(32, 178, 170);
+  }
+
+  .content#footer-bottom > .container {
+    background-color: rgb(127, 255, 212);
+
+    > * {
+      background-color: rgb(255, 182, 193);
+    }
+  }
 }
 
 header {
@@ -53,6 +69,7 @@ header {
   width: 65%;
   height: 320px;
   font-size: large;
+  max-width: 1280px;
 
   > * {
     height: 100%;
@@ -62,7 +79,8 @@ header {
 }
 
 .container#navbar {
-  height: 60%;
+  height: 35px;
+  margin: 0;
 }
 
 .container,
@@ -96,6 +114,7 @@ header {
 #jumbo {
   width: 50%;
   height: 250px;
+  max-width: 900px;
 }
 
 .white-bg {
@@ -104,6 +123,10 @@ header {
 
 .gray-bg {
   background-color: rgb(211, 211, 211);
+}
+
+.black-bg {
+  background-color: rgb(35, 39, 42);
 }
 
 .image {
@@ -116,4 +139,42 @@ header {
 
 .container.image-big {
   height: 600px;
+}
+
+.content#footer {
+  flex-direction: column;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(211, 211, 211);
+}
+
+.content#footer-top > .container {
+  margin-top: 10px;
+  height: 400px;
+}
+
+.big-footer-box {
+  flex-grow: 2;
+}
+
+.small-footer-box {
+  flex-grow: 1;
+}
+
+.content#footer-bottom {
+  align-items: flex-end;
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    height: 60px;
+
+    > * {
+      height: fit-content;
+    }
+  }
 }
